@@ -87,8 +87,14 @@ code {
   margin-bottom: 10px;
   padding-bottom: 10px;
   min-height: 50px;
+  position: relative;
 }
-
+.comment:hover {
+  cursor: pointer;
+}
+.comment:hover .comment-delete{
+  display: inline;
+}
 .comment .comment-user {
   flex-shrink: 0;
 }
@@ -101,4 +107,23 @@ code {
 .comment p {
   margin: 0;
   /*text-indent: 2em;*/
+}
+
+.comment-createdtime {
+  padding-right: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 12px;
+}
+.comment-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: transparent;
+  font-size: 12px;
+  cursor: pointer;
+  display: none;
+  color: red !important;
 }
